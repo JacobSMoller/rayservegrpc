@@ -1,0 +1,19 @@
+syntax = "proto3";
+package example.v1;
+
+// The greeting service definition.
+service ExampleService {
+  // Sends a greeting
+  rpc Example (ExampleRequest) returns (ExampleResponse) {}
+}
+
+// An example event, processing the completed work of Mary Shelley
+message ExampleRequest {
+  // id of the word in frankenstein
+  string word = 1;
+}
+
+// The response message containing the greetings
+message ExampleResponse {
+  string translation = 1;
+}
